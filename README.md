@@ -6,6 +6,13 @@ Using many of the task management and productivity apps could be completed and t
 
 We create [#Redone](#) to save more time to spend with our [@friends](#) and [@family](#).
 
+## [#Redone](#), is as simple as writing a tweet:
+Just write your [#job](#) and mention your [@family](#) and [@friends](#) if you like to contribute to that task with you.
+
+- [Concepts](https://redone.herokuapp.com/concepts.html)
+- [Use Cases](https://redone.herokuapp.com/use-cases.html)
+- [Updates](https://redone.herokuapp.com/updates.html)
+
 ## Documentations
 - [Strapi Framework](https://strapi.io/)
 - [API Endpoints](https://strapi.io/documentation/3.0.0-beta.x/content-api/api-endpoints.html)
