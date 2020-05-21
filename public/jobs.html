@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html id="html" data-vdom="-3">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1, maximum-scale=1,initial-scale=1,user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <title>Redone</title>
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Redone">
+
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  <link rel="shortcut icon" sizes="128x128" href="assets/img/logos/128.png?4">
+  <link rel="shortcut icon" sizes="192x192" href="assets/img/logos/192.png?4">
+  <link rel="shortcut icon" sizes="512x512" href="assets/img/logos/512.png?4">
+
+  <link rel="apple-touch-icon" sizes="128x128" href="assets/img/logos/128.png?4">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/img/logos/192.png?4">
+  <link rel="apple-touch-icon" sizes="512x512" href="assets/img/logos/512.png?4">
+
+  <link rel="apple-touch-icon-precomposed" sizes="128x128" href="assets/img/logos/128.png?4">
+  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/img/logos/192.png?4">
+  <link rel="apple-touch-icon-precomposed" sizes="512x512" href="assets/img/logos/512.png?4">
+
+  <link href="assets/img/splash/iphone5_splash.png?2" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="assets/img/splash/iphone6_splash.png?2" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="assets/img/splash/iphoneplus_splash.png?2" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="assets/img/splash/iphonex_splash.png?2" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="assets/img/splash/iphonexr_splash.png?2" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="assets/img/splash/iphonexsmax_splash.png?2" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="assets/img/splash/ipad_splash.png?2" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image?1" />
+  <link href="assets/img/splash/ipadpro1_splash.png?2" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image?1" />
+  <link href="assets/img/splash/ipadpro3_splash.png?2" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image?1" />
+  <link href="assets/img/splash/ipadpro2_splash.png?2" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image?1" />
+
+  <link rel="manifest" href="manifest.json?v=37">
+
+  <link rel="stylesheet" type="text/css" href="assets/fonts/material/material-icons.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/app-dark.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>
+    if (!(location.href).includes('localhost')) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MQNTM7J');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="color-gray-dark page-jobs">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQNTM7J"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="before-login" class="before-login">
+      <div class="wrapper">
+        <div class="header clearfix">
+          <h3 class="logo"><a href="/">Redone</a><span class="version">Beta</span></h3>
+          <!--<ul class="nav clearfix">-->
+            <!--<li><a href="#" class="button-signup">Register</a></li>-->
+          <!--</ul>-->
+        </div>
+
+        <div class="auth-box">
+          <form id="auth-form-login" class="auth-form">
+            <div class="form-row username">
+              <label class="input-label" for="username">Username</label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+            </div>
+
+            <div class="form-row password">
+              <label class="input-label" for="password">Password</label>
+              <input type="password" placeholder="Enter Password" name="password" required>
+              <!--<span class="field-hint forget-password">Forgot <a href="#">password?</a></span>-->
+            </div>
+
+            <div class="form-actions">
+              <a href="#" id="auth-login" class="auth-login button is-big">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="after-login" class="after-login">
+      <div class="wrapper">
+          <div class="header clearfix">
+            <ul class="nav left clearfix">
+              <li>
+                <h3 class="logo">
+                  <a href="#" data-type="tags" data-id="" data-title="Home">Redone</a>
+                  <span id="me" class="me" data-notify=""></span>
+                </h3>
+                <!--<h3 class="logo"><a href="/jobs.html">Redone</a><span id="me" class="me"></span></h3>-->
+              </li>
+              <!--<li>-->
+                <!--<span id="me" class="me"></span>-->
+              <!--</li>-->
+            </ul>
+
+            <ul class="nav right clearfix">
+              <li class="hide-in-mobile"><span class="version">Beta</span></li>
+              <li><a href="/" class="theme-switch js__theme-switch"><i class="material-icons">brightness_4</i></a></li>
+              <li><a href="/" id="auth-logout" class="auth-logout">Log out</a></li>
+            </ul>
+          </div>
+
+          <ul id="tags-list" class="taxonomies-list tags-list"></ul>
+          <div class="sep"></div>
+
+          <div class="page-header">
+            <h1 class="page-title" id="page-title">Home</h1>
+            <span id="notify-something" class="notify-something"></span>
+            <!--<a href="#add" class="add-subject" id="add-subject"><i class="material-icons">add</i></a>-->
+          </div>
+
+          <ul class="todos-list todo-new-subject" id="todo-new-subject"></ul>
+          <ul id="todos-list" class="todos-list"></ul>
+          <div class="sep"></div>
+
+          <ul id="users-list" class="taxonomies-list assignment-list"></ul>
+          <div class="sep"></div>
+
+          <ul id="actionTags-list" class="taxonomies-list action-tags-list"></ul>
+      </div>
+
+      <div class="modal modal-add-item" id="modal-add-item">
+        <div class="modal-close"></div>
+        <div class="modal-wrapper">
+          <a href="#" id="close-subject" class="close-subject"><i class="material-icons">close</i></a>
+          <div class="modal-content">
+            <textarea class="add-item-autocomplete js__add-item-autocomplete" placeholder="Just #write and @mention ..."></textarea>
+          </div>
+          <a href="#" id="submit-subject" class="submit-primary">Add</a>
+        </div>
+      </div>
+
+
+      <div class="modal" id="modal">
+        <div class="modal-close"></div>
+        <div class="modal-wrapper">
+          <div class="modal-content" id="modal-content"></div>
+          <a href="#" id="modal-yes" class="submit-delete">Yes</a>
+          <a href="#" id="modal-no" class="submit-primary">No</a>
+        </div>
+      </div>
+
+      <div class="focus-mode" id="focus-mode">
+      <div class="focus-content" id="focus-content"></div>
+      <a href="#" class="focus-close" id="focus-close">Exit Focus</a>
+    </div>
+    </div>
+
+    <script src="assets/vendor/jquery-3.4.1.min.js"></script>
+    <script src="assets/vendor/jquery.textcomplete.min.js"></script>
+    <script src="assets/js/app-strapi.js"></script>
+</body>
+</html>

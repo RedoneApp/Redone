@@ -1,0 +1,235 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/iranSans/IRANSans-web.eot');
+  src: url('../fonts/iranSans/IRANSans-web.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/iranSans/IRANSans-web.woff') format('woff'),
+       url('../fonts/iranSans/IRANSans-web.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/iranSans/IRANSans-Medium-web.eot');
+  src: url('../fonts/iranSans/IRANSans-Medium-web.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/iranSans/IRANSans-Medium-web.woff') format('woff'),
+       url('../fonts/iranSans/IRANSans-Medium-web.ttf') format('truetype');
+}
+
+
+
+body {
+    font-size: 12px;
+    font-family: IRANSans, sans-serif;
+    font-weight: normal;
+
+    direction: rtl;
+    color: #1b2733;
+}
+
+a {
+    text-decoration: none;
+
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+    transition-delay: 0ms;
+    transition-property: color, background-color, opacity, font-size;
+}
+
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;
+}
+
+a,
+a:visited,
+a:active {
+    color: #0070e0;
+}
+
+a:hover {
+    color: #0057ad;
+}
+
+
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo,
+.page-title {
+
+}
+
+
+
+
+.LoaderBalls {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px auto;
+}
+.LoaderBalls__item {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(0, 87, 173, 0.4);
+}
+.LoaderBalls__item:nth-child(1) {
+  animation: bouncing 0.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
+}
+.LoaderBalls__item:nth-child(2) {
+  animation: bouncing 0.4s 0.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+.LoaderBalls__item:nth-child(3) {
+  animation: bouncing 0.4s 0.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
+  }
+  100% {
+    transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
+  }
+}
+
+
+.sep {
+    border-bottom: solid 1px #e3e7e8;
+    margin-bottom: 10px;
+    padding-bottom: 10px;   
+}
+
+
+.taxonomies-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .taxonomies-item {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+        .taxonomies-item:first-child {
+            margin-right: 0;
+        }
+
+
+
+.todos-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .todo {
+        margin-bottom: 10px;
+        text-decoration: line-through;
+        cursor: pointer;
+    }
+
+        .todo span {
+            display: inline-block;
+        }
+        
+        .todo:before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            margin-left: 5px;
+            border: solid 2px #ced4d6;
+            border-radius: 3px;
+            vertical-align: middle;
+            line-height: 8px;
+            font-size: 7px;
+            text-align: center;
+        }
+
+        .done:before {
+            background: #0c2481;
+            border-color: #0c2481;
+            color: #fff;
+            content: '✔';
+        }
+
+        .title {
+
+        }
+
+        .done .title {
+            color: #99a5b2;
+        }
+
+        .done .title,
+        .done .assign,
+        .done .tag {
+            position: relative;
+        }
+
+        .done .title:before,
+        .done .assign:before,
+        .done .tag:before {
+            content: '';
+            background: #7c8c9c;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: 7px;
+            opacity: 0.6;
+        }
+
+        .assign,
+        .tag,
+        .meta > span {
+            padding-right: 5px;
+        }
+            .assign:first-child,
+            .tag:first-child,
+            .meta > span:first-child {
+                margin-right: 0;
+            }
+
+        .assign {
+
+        }
+
+        .tag {
+
+        }
+
+        .meta {
+            font-size: 10px;
+        }
+
+        .meta,
+        .meta a {
+            color: #637282;
+        }
+
+        .meta a:hover {
+
+        }
+
+            .author {
+
+            }
+
+            .date {
+
+            }
+
+            .edit {
+
+            }
+

@@ -1,0 +1,23 @@
+{
+  "name": "Redone",
+  "short_name": "Redone",
+  "start_url": "https://redone.herokuapp.com/jobs.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/img/logos/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/img/logos/512.png?4",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "assets/img/logos/128.png?4",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "tasks",
+  "info": {
+    "name": "task",
+    "description": "Add to-dos here."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "required": true,
+      "type": "richtext"
+    },
+    "Deadline": {
+      "type": "date"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "tasks"
+    },
+    "assign": {
+      "collection": "user",
+      "via": "tasks",
+      "plugin": "users-permissions"
+    },
+    "Done": {
+      "type": "boolean"
+    },
+    "created_by": {
+      "model": "user",
+      "via": "owner",
+      "plugin": "users-permissions"
+    }
+  }
+}

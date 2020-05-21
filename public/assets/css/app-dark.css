@@ -1,0 +1,102 @@
+.is-dark {
+  background: #232427;
+
+  color: #267753; /* green */
+  color: #609BE8; /* blue */
+  color: #232427; /* gray-1 */
+  color: #313234; /* gray-2 */
+  color: #9FA0A2; /* gray-3 */
+  color: #F1F1F3; /* gray-4 */
+}
+
+.is-dark .color-gray-dark {
+  color: #F1F1F3;
+}
+
+.is-dark .taxonomies-item a:hover,
+.is-dark .nav a:hover,
+.is-dark .color-primary,
+.is-dark a:visited,
+.is-dark a:active,
+.is-dark a {
+  color: #609BE8;
+}
+
+
+.is-dark.page-jobs .nav .logo a,
+.is-dark.page-jobs .nav .logo a:visited,
+.is-dark.page-jobs .nav .logo a:active {
+  color: #609BE8;
+}
+
+.is-dark.page-jobs .nav .logo a:hover {
+  color: #0070e0;
+}
+
+.is-dark .color-primary:hover,
+.is-dark .color-primary-hover,
+.is-dark a:hover {
+  color: #b4d4fd;
+}
+
+.is-dark .nav a {
+  color: #9FA0A2;
+}
+
+.is-dark .created_by {
+  color: #afb1b6;
+}
+
+.is-dark .modal-wrapper {
+  background: #2f3137;
+}
+
+.is-dark .header,
+.is-dark .sep {
+  border-color: #4a4c4f;
+}
+
+.is-dark .version {
+  color: #1b2733;
+  background: #f0f2f4;
+}
+
+.is-dark a.clear-it,
+.is-dark a.focus-it {
+  color: #b1bac4;
+}
+
+.is-dark a.clear-it:hover {
+  color: #F44336;
+}
+
+.is-dark a.focus-it:hover {
+  color: #8BC34A;
+}
+
+.is-dark .taxonomies-item a {
+  color: #afb1b6;
+}
+.is-dark .add-item-autocomplete,
+.is-dark .add-item-autocomplete::placeholder {
+  color: #768698;
+}
+
+.is-dark .add-item-autocomplete:focus {
+  color: #d3d8de;
+  background: #2c2d30;
+  border-color: #4a4c4f;
+}
+
+.is-dark code {
+  background: #4a4c4f;
+  color: #e8e8e8;
+}
+
+.is-dark .notify-something {
+  color: #b1bac4;
+}
+
+.is-dark .highlight {
+  background: rgba(244, 64, 52, 0.26);
+}
