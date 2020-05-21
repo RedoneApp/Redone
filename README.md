@@ -1,5 +1,5 @@
 # Redone
-## We have many [#Tasks](#) and [#ToDo](#) that needs to be done. Some of them need our [#Immediate](#) attention and some others are just [#CoolToDo](#). We all have lists of [#BooksToRead](#), [#PlacesToVisit](#), [#Groceries](#) to buy and [#BillsToPay](#).
+We have many [#Tasks](#) and [#ToDo](#) that needs to be done. Some of them need our [#Immediate](#) attention and some others are just [#CoolToDo](#). We all have lists of [#BooksToRead](#), [#PlacesToVisit](#), [#Groceries](#) to buy and [#BillsToPay](#).
 
 ## But how to organize and memorize these?
 Using many of the task management and productivity apps could be completed and time consuming and to personalize them to our advantage is another [#task](#) added to our list.
