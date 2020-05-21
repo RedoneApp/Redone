@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subtags",
+  "info": {
+    "name": "Subtag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "tasks": {
+      "collection": "task",
+      "via": "subtags",
+      "dominant": true
+    },
+    "tag": {
+      "model": "tag",
+      "via": "subtags"
+    }
+  }
+}
