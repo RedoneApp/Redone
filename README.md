@@ -1,3 +1,3 @@
-# Strapi application
+# Redone
 
-A quick description of your strapi application
+- [API Endpoints](https://strapi.io/documentation/3.0.0-beta.x/content-api/api-endpoints.html)
