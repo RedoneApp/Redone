@@ -612,11 +612,11 @@ var add_item_dataLayer = {},
 
     add_tags = function(mentions, tags, subjectData, id) {
       var listOfTagsNames	    = [],
-        listOfTags	        = JSON.parse(localStorage.tags||'{}');
+          listOfTags	        = JSON.parse(localStorage.tags||'{}');
   
       for (var i = 0; i < listOfTags.length; i++) {
         listOfTagsNames.push(listOfTags[i].Title);
-  
+
         for (var j = 0; j < tags.length; j++) {
           if (listOfTags[i].Title === tags[j]) {
             subjectData.tags.push({'id': listOfTags[i].id});
@@ -816,7 +816,7 @@ var add_item_dataLayer = {},
       var regexp = '';
 
       if (sign == '#') {
-        regexp = /(\s|^)\#\w\w+\b/gm;
+        regexp = /#([\w\:]+)/gm;
       } else if (sign == '@') {
         regexp = /(\s|^)\@\w\w+\b/gm;
       }
@@ -825,7 +825,13 @@ var add_item_dataLayer = {},
       if (result) {
         result = result.map(function(s){
           s = s.replace(sign, '');
-          return s.trim();
+          s = s.trim();
+
+          if (s.includes(':')) {
+            s = s.split(':')
+          }
+
+          return s;
         });
 
         return result;
