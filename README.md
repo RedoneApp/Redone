@@ -39,4 +39,5 @@ Just write your [#job](#) and mention your [@family](#) and [@friends](#) if you
 
 6. Now create admin account in [admin panel](http://localhost:1337/admin)
 7. Then [create a user](http://localhost:1337/admin/plugins/content-manager/collectionType/plugins::users-permissions.user) to using Redone App (this user is different from admin user)
-8. Now everything is ready to use, just open [http://localhost:1337/](http://localhost:1337/) and Signin with your user name and password
+8. Go to Roles & Permissions and edit [Authenticated role](http://localhost:1337/admin/plugins/users-permissions/roles/edit/1) in APPLICATION check all Tag, Task, Subtag.
+9. Now everything is ready to use, just open [http://localhost:1337/](http://localhost:1337/) and Signin with your user name and password
