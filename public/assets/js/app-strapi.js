@@ -27,8 +27,6 @@ var api_path     = '/',
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(eventProps);
-
-      // console.log(window.dataLayer[window.dataLayer.length - 1]);
     };
 
 
@@ -130,8 +128,6 @@ var temp_items = function(data) {
       data = (data ? data : {});
       var html = '';
 
-      // console.warn(data);
-
       for (var i = 0; i < data.length; i++) {
         html += temp_item(data[i]);
       }
@@ -153,9 +149,6 @@ var temp_items = function(data) {
       html += '<li class="' + classNames + '" data-state="' + (item.Done ? 'done' : 'todo') + '" id="item-' + item.id + '" data-id="' + item.id + '" data-title="' + item.Title + '">';
       html += '<a href="#" class="clear-it DOEM" id="clear-it"><i class="material-icons">clear_all</i></a>';
       html += temp_item_title(item);
-      // html += temp_item_tags(item);
-      // html += temp_item_assignment(item);
-      // html += temp_item_meta(item);
       html += '<a href="#" class="focus-it DOEM" id="focus-it"><i class="material-icons">filter_center_focus</i></a>';
       html += '</li>';
 
@@ -215,13 +208,9 @@ var temp_items = function(data) {
           html = '';
 
       if (data.tags) {
-        // html += '<span class="tags-list">';
-
         for (var i = 0; i < data.tags.length; i++) {
           html += '<span class="tag"><a href="#' + data.tags[i].Title + '" data-type="tags" data-id="' + data.tags[i].id + '" data-title="#' + data.tags[i].Title + '">#' + data.tags[i].Title + '</a></span>';
         }
-
-        // html += '</span>'
       }
 
       return html;
@@ -487,7 +476,7 @@ var load_tasks_params = function(params) {
         $selector.html(temp_tags_item());
 
         ajax({
-          url: api_tags + '?_sort=title:DESC',
+          url: api_tags + '?_sort=title:DESC&user=' + me.user.id,
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -495,10 +484,7 @@ var load_tasks_params = function(params) {
           },
         }).done(function (data) {
           try {
-            // console.log('load_tags', data);
             localStorage.setItem('tags', JSON.stringify(data));
-
-            // $selector.html(temp_tags_item(data));
           } catch (e) {
             console.error(e);
           }
@@ -599,7 +585,6 @@ var add_item_dataLayer = {},
       if (tags.length > 0) {
         add_tags(mentions, tags, subjectData, id);
       } else {
-        // console.warn('addSubject', 'No TAGS');
         add_mentionsAndSubject(mentions, subjectData, id);
       }
     },
@@ -627,10 +612,8 @@ var add_item_dataLayer = {},
       var newTags = tags.filter(function(val) {
         return listOfTagsNames.indexOf(val) == -1;
       });
-  
-      if (newTags.length > 0) {
-        // console.warn('addSubject', 'New Tags:', newTags);
-  
+
+      if (newTags.length > 0) {  
         // calls the provided url and returns a reference to the Ajax call
         var createTag = function(tagName) {
             return $.ajax({
@@ -671,7 +654,6 @@ var add_item_dataLayer = {},
             newTagsData.push(arguments[i]);
   
           };
-          // console.warn('newTagsData', newTagsData);
   
           var merged = [];
   
@@ -686,19 +668,13 @@ var add_item_dataLayer = {},
             merged.push(newTagsData[0]);
           }
   
-          // and log them to the console
-          // console.warn('Tags Added:', merged);
-  
           for (var j = 0; j < merged.length; j++) {
             subjectData.tags.push({'id': merged[j].id});
           }
   
-  
           add_mentionsAndSubject(mentions, subjectData, id);
         });
-      } else {
-        // console.warn('addSubject', 'Not New tags');
-  
+      } else {  
         add_mentionsAndSubject(mentions, subjectData, id);
       }
 
@@ -768,8 +744,6 @@ var add_item_dataLayer = {},
         }
       } else { // Add Item
         ajax_method = 'POST';
-        // subjectData.created_by = {};
-        // subjectData.created_by.id = me.user.id;
       }
 
       ajax({
@@ -1021,7 +995,7 @@ var item_addPlaceholder = 'Write #tags and @mentions ...',
           // #4 - Function called at every new keystroke
           search: function(query, callback) {
             ajax({
-              url: api_tags + (!!query ? '?Title_contains=' + query : ''),
+              url: api_tags + '?' + (!!query ? 'Title_contains=' + query + '&': '') + 'user=' + me.user.id,
               method: "GET",
               headers: {
                 "Content-Type": "application/json",
