@@ -23,16 +23,16 @@ Just write your [#job](#) and mention your [@family](#) and [@friends](#) if you
 ## Run Redone on local
 
 1. Install [Yarn](https://yarnpkg.com/) on your system:
-``npm install -g yarn``
+```npm install -g yarn```
 
 2. Clone this project:
-``$ git clone https://github.com/RedoneApp/Redone.git``
+```$ git clone https://github.com/RedoneApp/Redone.git```
 
 3. Open project folder
-`` cd Redone``
+``` cd Redone```
 
 4. Install Yarn Packages
-`` yarn install``
+``` yarn install```
 
 5. Run strapi
-``yarn strapi dev``
+```yarn strapi dev```
