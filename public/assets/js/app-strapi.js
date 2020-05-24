@@ -593,29 +593,9 @@ var add_item_dataLayer = {},
       $('#modal-add-item').removeClass('active');
       $('.' + itemField_name).val(item_addPlaceholder);
       $('.' + itemField_name).blur();
-    };
+    },
 
-    add_tags = function(mentions, tags, subjectData, id) {
-      var listOfTagsNames	    = [],
-          listOfTags	        = JSON.parse(localStorage.tags||'{}');
-  
-      for (var i = 0; i < listOfTags.length; i++) {
-        listOfTagsNames.push(listOfTags[i].Title);
-
-        for (var j = 0; j < tags.length; j++) {
-          if (listOfTags[i].Title === tags[j]) {
-            subjectData.tags.push({'id': listOfTags[i].id});
-          }
-        }
-      }
-  
-      var newTags = tags.filter(function(val) {
-        return listOfTagsNames.indexOf(val) == -1;
-      });
-
-      if (newTags.length > 0) {  
-        // calls the provided url and returns a reference to the Ajax call
-        var createTag = function(tagName) {
+    createTag = function(tagName) {
             return $.ajax({
               url: api_tags,
               method: "POST",
@@ -629,12 +609,33 @@ var add_item_dataLayer = {},
               }
             });
           },
-          results = [],
-          tagNames = newTags;
+
+    add_tags = function(mentions, tags, subjectData, id) {
+      var listOfTagsNames	    = [],
+          listOfTags	        = JSON.parse(localStorage.tags||'{}');
+  
+      for (var i = 0; i < listOfTags.length; i++) {
+        listOfTagsNames.push(listOfTags[i].Title);
+
+        for (var j = 0; j < tags.length; j++) {
+          if (listOfTags[i].Title === tags[j].tag) {
+            subjectData.tags.push({'id': listOfTags[i].id});
+          }
+        }
+      }
+  
+      var newTags = tags.filter(function(val) {
+        return listOfTagsNames.indexOf(val.tag) == -1;
+      });
+
+      if (newTags.length > 0) {  
+        // calls the provided url and returns a reference to the Ajax call
+        var results = [],
+            tagNames = newTags;
   
         // store the reference to the Ajax api for later usage
         for (var i = 0; i < tagNames.length; i++) {
-          results.push(createTag(tagNames[i]));
+          results.push(createTag(tagNames[i].tag));
         }
   
         // invoke each function stored in the result array and proceed when they are all done
@@ -798,14 +799,19 @@ var add_item_dataLayer = {},
       result = str.match(regexp);
       if (result) {
         result = result.map(function(s){
+          var tagAndSubtag = {};
           s = s.replace(sign, '');
           s = s.trim();
 
           if (s.includes(':')) {
-            s = s.split(':')
+            s = s.split(':');
+            tagAndSubtag.tag = s[0];
+            tagAndSubtag.subtag = s[1];
+          } else {
+            tagAndSubtag.tag = s; 
           }
 
-          return s;
+          return tagAndSubtag;
         });
 
         return result;
