@@ -1,5 +1,4 @@
 {
-  "kind": "collectionType",
   "connection": "default",
   "collectionName": "tags",
   "info": {
@@ -21,10 +20,6 @@
       "collection": "task",
       "dominant": true,
       "via": "tags"
-    },
-    "subtags": {
-      "via": "tag",
-      "collection": "subtag"
     }
   }
 }
