@@ -768,8 +768,8 @@ var add_item_dataLayer = {},
         }
       } else { // Add Item
         ajax_method = 'POST';
-        subjectData.created_by = {};
-        subjectData.created_by.id = me.user.id;
+        // subjectData.created_by = {};
+        // subjectData.created_by.id = me.user.id;
       }
 
       ajax({

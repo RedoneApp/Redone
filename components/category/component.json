@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_category_components",
+  "info": {
+    "name": "component",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "titleofcomponentzone": {
+      "type": "string"
+    }
+  }
+}

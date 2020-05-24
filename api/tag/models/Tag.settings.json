@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "tags",
   "info": {
@@ -13,13 +14,22 @@
   "attributes": {
     "Title": {
       "required": true,
-      "unique": true,
+      "unique": false,
       "type": "string"
     },
     "tasks": {
       "collection": "task",
-      "dominant": true,
+      "via": "tags",
+      "dominant": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
       "via": "tags"
+    },
+    "subtags": {
+      "via": "tag",
+      "collection": "subtag"
     }
   }
 }

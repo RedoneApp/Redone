@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "tasks",
   "info": {
@@ -22,8 +23,8 @@
       "type": "date"
     },
     "tags": {
-      "collection": "tag",
-      "via": "tasks"
+      "via": "tasks",
+      "collection": "tag"
     },
     "assign": {
       "collection": "user",
@@ -37,6 +38,10 @@
       "model": "user",
       "via": "owner",
       "plugin": "users-permissions"
+    },
+    "subtags": {
+      "via": "tasks",
+      "collection": "subtag"
     }
   }
 }
